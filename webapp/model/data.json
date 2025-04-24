@@ -1,0 +1,13 @@
+{
+    "users": [
+        {
+            "NumberDocument": "123456789 P",
+            "FullName": "Jorge Bricario",
+            "BirthDate": "01/01/1993",
+            "PlaceBirth": "VEN",
+            "Nationality": "VEN",
+            "Genre": "Masculino",
+            "CivilStatus": "Soltero"
+        }
+    ]
+}

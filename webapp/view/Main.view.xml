@@ -1,11 +1,214 @@
-<mvc:View controllerName="proyectosapui5.controller.Main"
+<mvc:View 
+    controllerName="proyectosapui5.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:layout="sap.ui.layout"
+    xmlns:table="sap.ui.table"
+    displayBlock="true">
+    
     <Page id="page" title="{i18n>title}">
         <content>
-            <Panel headerText="{i18n>selectionScreen}"> 
+            <!-- Primera fila con 2 paneles -->
+            <layout:Grid hSpacing="1" vSpacing="1" defaultSpan="L6 M6 S12">
+                <!-- Panel Información Personal -->
+                <Panel headerText="{i18n>personalInformation}" class="sapUiResponsiveMargin" height="auto">
+                    <VBox class="sapUiSmallMargin">
+                        <Label id="labelId" labelFor="Id" text="{i18n>id}" width="100%"/>
+                        <Input id="Id" value="{selectionId>/Id}" width="100%"/>
+                        
+                        <Label id="labeltypeDocument" text="{i18n>typeDocument}" width="100%"/>
+                        <Select id="slTypeDocument" selectedKey="{personalInformation>/TypeDocumentkey}" 
+                                forceSelection="false" width="100%"
+                                items="{personalInformation>/TypeDocument}">
+                            <items>
+                                <core:Item key="{personalInformation>key}" text="{personalInformation>text}"/>
+                            </items>
+                        </Select>
+                        
+                        <Label id="labelNumberDocument" labelFor="NumberDocument" text="{i18n>numberDocument}" width="100%"/>
+                        <Input id="NumberDocument" value="{selectionNumberDocument>/NumberDocument}" width="100%"/>
+                        
+                        <Label id="labelFirstName" labelFor="FirstName" text="{i18n>firstName}" width="100%"/>
+                        <Input id="FirstName" value="{selectionFirstName>/FirstName}" width="100%"/>
+                        
+                        <Label id="labelLastName" labelFor="LastName" text="{i18n>lastName}" width="100%"/>
+                        <Input id="LastName" value="{selectionLastName>/LastName}" width="100%"/>
+                        
+                        <Label id="labelBirthDate" labelFor="BirthDate" text="{i18n>birthDate}" width="100%"/>
+                        <DatePicker id="BirthDate"
+                                    value="{selectionBirthDate>/BirthDate}"
+                                    displayFormat="yyyy-MM-dd"
+                                    valueFormat="yyyy-MM-dd"
+                                    width="100%"/>
+                    </VBox>
+                </Panel>
+
+                <!-- Panel Otra Información -->
+                <Panel headerText="{i18n>otherInformation}" class="sapUiResponsiveMargin" height="auto">
+                    <VBox class="sapUiSmallMargin">
+                        <Label id="labelPlaceBirth" text="{i18n>placeBirth}" width="100%"/>
+                        <Select id="slPlaceBirth" selectedKey="{otherInformation1>/PlaceBirthkey}" 
+                                forceSelection="false" width="100%"
+                                items="{otherInformation1>/PlaceBirth}">
+                            <items>
+                                <core:Item key="{otherInformation1>key}" text="{otherInformation1>text}"/>
+                            </items>
+                        </Select>
+                        
+                        <Label id="labelNationality" text="{i18n>nationality}" width="100%"/>
+                        <Select id="slNationality" selectedKey="{otherInformation2>/Nationalitykey}" 
+                                forceSelection="false" width="100%"
+                                items="{otherInformation2>/Nationality}">
+                            <items>
+                                <core:Item key="{otherInformation2>key}" text="{otherInformation2>text}"/>
+                            </items>
+                        </Select>
+                        
+                        <Label id="labelGenre" text="{i18n>genre}" width="100%"/>
+                        <Select id="slGenre" selectedKey="{otherInformation3>/Genrekey}" 
+                                forceSelection="false" width="100%"
+                                items="{otherInformation3>/Genre}">
+                            <items>
+                                <core:Item key="{otherInformation3>key}" text="{otherInformation3>text}"/>
+                            </items>
+                        </Select>
+                        
+                        <Label id="labelCivilStatus" text="{i18n>civilStatus}" width="100%"/>
+                        <Select id="slCivilStatus" selectedKey="{otherInformation4>/CivilStatuskey}" 
+                                forceSelection="false" width="100%"
+                                items="{otherInformation4>/CivilStatus}">
+                            <items>
+                                <core:Item key="{otherInformation4>key}" text="{otherInformation4>text}"/>
+                            </items>
+                        </Select>
+                    </VBox>
+                </Panel>
+            </layout:Grid>
+
+            <!-- Segunda fila con 2 paneles -->
+            <layout:Grid hSpacing="1" vSpacing="1" defaultSpan="L6 M6 S12">
+                <!-- Panel Información de Dirección -->
+                <Panel headerText="{i18n>addressInformation}" class="sapUiResponsiveMargin" height="auto">
+                    <VBox class="sapUiSmallMargin">
+                        <Label id="labelCountry" text="{i18n>country}" width="100%"/>
+                        <Select id="slCountry" selectedKey="{addressInformation1>/Countrykey}" 
+                                forceSelection="false" width="100%"
+                                items="{addressInformation1>/Country}">
+                            <items>
+                                <core:Item key="{addressInformation1>key}" text="{addressInformation1>text}"/>
+                            </items>
+                        </Select>
+                        
+                        <Label id="labelProvince" text="{i18n>province}" width="100%"/>
+                        <Select id="slProvince" selectedKey="{addressInformation2>/Provincekey}" 
+                                forceSelection="false" width="100%"
+                                items="{addressInformation2>/Province}">
+                            <items>
+                                <core:Item key="{addressInformation2>key}" text="{addressInformation2>text}"/>
+                            </items>
+                        </Select>
+                        
+                        <Label id="labelRegion" text="{i18n>region}" width="100%"/>
+                        <Select id="slRegion" selectedKey="{addressInformation3>/Regionkey}" 
+                                forceSelection="false" width="100%"
+                                items="{addressInformation3>/Region}">
+                            <items>
+                                <core:Item key="{addressInformation3>key}" text="{addressInformation3>text}"/>
+                            </items>
+                        </Select>
+                        
+                        <Label id="labelAddress" labelFor="Address" text="{i18n>address}" width="100%"/>
+                        <Input id="Address" value="{selectionAddress>/Address}" width="100%"/>
+                        
+                        <Label id="labelPostalCode" labelFor="PostalCode" text="{i18n>postalCode}" width="100%"/>
+                        <Input id="PostalCode" value="{selectionPostalCode>/PostalCode}" width="100%"/>
+                    </VBox>
+                </Panel>
+
+                <!-- Panel Información de Contacto -->
+                <Panel headerText="{i18n>contactInformation}" class="sapUiResponsiveMargin" height="auto">
+                    <VBox class="sapUiSmallMargin">
+                        <Label id="labelPhoneNumber" labelFor="PhoneNumber" text="{i18n>phoneNumber}" width="100%"/>
+                        <Input id="PhoneNumber" value="{selectionPhoneNumber>/PhoneNumber}" width="100%"/>
+                        
+                        <Label id="labelEmail" labelFor="Email" text="{i18n>email}" width="100%"/>
+                        <Input id="PhoneEmail" value="{selectionEmail>/Email}" width="100%"/>
+                    </VBox>
+                </Panel>
+            </layout:Grid>
+
+            <!-- Bloque para botones y tabla -->
+            <VBox class="sapUiMediumMargin">
+                <!-- Botones Save y Clear -->
+                <HBox justifyContent="End" class="sapUiSmallMarginBottom">
+                    <Button 
+                        id="btnClear"
+                        text="Clear"
+                        press="onClear"
+                        class="sapUiSmallMarginEnd"/>
+                    <Button 
+                        id="btnSave"
+                        text="Save"
+                        type="Emphasized"
+                        press="onSave"/>
+                </HBox>
                 
-            </Panel>
+                <!-- Tabla de usuarios -->
+                <Panel headerText="Users ({= ${formData>/users}.length || 0 })" width="100%">
+                    <table:Table 
+                        id="usersTable"
+                        rows="{formData>/users}"
+                        visibleRowCount="5"
+                        selectionMode="None"
+                        width="100%">
+                        <table:columns>
+                            <table:Column width="12%">
+                                <Label text="Number Document"/>
+                                <table:template>
+                                    <Text text="{formData>NumberDocument}"/>
+                                </table:template>
+                            </table:Column>
+                            <table:Column width="18%">
+                                <Label text="Full Name"/>
+                                <table:template>
+                                    <Text text="{formData>FullName}"/>
+                                </table:template>
+                            </table:Column>
+                            <table:Column width="10%">
+                                <Label text="Birth Date"/>
+                                <table:template>
+                                    <Text text="{formData>BirthDate}"/>
+                                </table:template>
+                            </table:Column>
+                            <table:Column width="10%">
+                                <Label text="Place Birth"/>
+                                <table:template>
+                                    <Text text="{formData>PlaceBirth}"/>
+                                </table:template>
+                            </table:Column>
+                            <table:Column width="10%">
+                                <Label text="Nationality"/>
+                                <table:template>
+                                    <Text text="{formData>Nationality}"/>
+                                </table:template>
+                            </table:Column>
+                            <table:Column width="10%">
+                                <Label text="Genre"/>
+                                <table:template>
+                                    <Text text="{formData>Genre}"/>
+                                </table:template>
+                            </table:Column>
+                            <table:Column width="10%">
+                                <Label text="Civil Status"/>
+                                <table:template>
+                                    <Text text="{formData>CivilStatus}"/>
+                                </table:template>
+                            </table:Column>
+                        </table:columns>
+                    </table:Table>
+                </Panel>
+            </VBox>
         </content>
     </Page>
 </mvc:View>

@@ -1,0 +1,21 @@
+{
+    "TypeDocumentkey": "",
+    "TypeDocument":[
+        {
+            "key": "CC",
+            "text": "Cédula de Ciudadanía"
+        },
+        {
+            "key": "TI",
+            "text": "Tarjeta de Identidad"
+        },
+        {
+            "key": "PAS",
+            "text": "Pasaporte"
+        },
+        {
+            "key": "NIT",
+            "text": "Nit"
+        }
+    ]
+}

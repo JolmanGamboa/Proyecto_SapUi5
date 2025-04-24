@@ -1,0 +1,21 @@
+{
+    "CivilStatuskey": "",
+    "CivilStatus": [
+        {
+            "key": "S",
+            "text": "Soltero/a"
+        },
+        {
+            "key": "C",
+            "text": "Casado/a"
+        },
+        {
+            "key": "V",
+            "text": "Viudo/a"
+        },
+        {
+            "key": "D",
+            "text": "Divorciado/a"
+        }
+    ]
+}

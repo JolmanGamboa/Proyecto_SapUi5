@@ -1,0 +1,20 @@
+{
+    "Countrykey": "",
+    "Country": [
+        { "key": "COL", "text": "Colombia" },
+        { "key": "ARG", "text": "Argentina" },
+        { "key": "BRA", "text": "Brasil" },
+        { "key": "USA", "text": "Estados Unidos" },
+        { "key": "CAN", "text": "Canadá" },
+        { "key": "ESP", "text": "España" },
+        { "key": "MEX", "text": "México" },
+        { "key": "PER", "text": "Perú" },
+        { "key": "DEU", "text": "Alemania" },
+        { "key": "FRA", "text": "Francia" },
+        { "key": "ITA", "text": "Italia" },
+        { "key": "CHL", "text": "Chile" },
+        { "key": "ECU", "text": "Ecuador" },
+        { "key": "VEN", "text": "Venezuela" },
+        { "key": "UK",  "text": "Reino Unido" }
+    ]
+}

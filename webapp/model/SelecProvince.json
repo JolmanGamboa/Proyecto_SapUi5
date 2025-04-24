@@ -1,0 +1,18 @@
+{
+    "Provincekey": "",
+    "Province": [
+        { "key": "ANT", "text": "Antioquia" },
+        { "key": "CUN", "text": "Cundinamarca" },
+        { "key": "VAL", "text": "Valle del Cauca" },
+        { "key": "ATL", "text": "Atlántico" },
+        { "key": "BOY", "text": "Boyacá" },
+        { "key": "COR", "text": "Córdoba" },
+        { "key": "SFE", "text": "Santafé de Bogotá" },
+        { "key": "BUE", "text": "Buenos Aires" },
+        { "key": "SAO", "text": "São Paulo" },
+        { "key": "QUE", "text": "Québec" },
+        { "key": "TX",  "text": "Texas" },
+        { "key": "CAT", "text": "Cataluña" },
+        { "key": "LIM", "text": "Lima" }
+    ]
+}

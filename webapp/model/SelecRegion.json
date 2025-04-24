@@ -1,0 +1,16 @@
+{
+    "Regionkey": "",
+    "Region": [
+        { "key": "AND", "text": "Andina" },
+        { "key": "CAR", "text": "Caribe" },
+        { "key": "PAC", "text": "Pacífico" },
+        { "key": "AMA", "text": "Amazonía" },
+        { "key": "ORI", "text": "Orinoquía" },
+        { "key": "SIE", "text": "Sierra Madre" },
+        { "key": "ATL", "text": "Atlántico Norte" },
+        { "key": "EUR", "text": "Europa Occidental" },
+        { "key": "NOR", "text": "Norteamérica" },
+        { "key": "SOU", "text": "Sudamérica" },
+        { "key": "CAF", "text": "Centroamérica" }
+    ]
+}
