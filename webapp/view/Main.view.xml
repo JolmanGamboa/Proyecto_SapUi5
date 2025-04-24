@@ -1,0 +1,11 @@
+<mvc:View controllerName="proyectosapui5.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Panel headerText="{i18n>selectionScreen}"> 
+                
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
